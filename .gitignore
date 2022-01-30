@@ -101,3 +101,10 @@ typings/
 
 # TernJS port file
 .tern-port
+
+# eslint setting files
+.eslintrc.js
+.eslintignore
+
+# vscode
+.vscode/

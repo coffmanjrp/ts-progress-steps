@@ -4,35 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc -w",
-    "lint": "gts lint",
-    "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run lint"
+    "sass": "sass -w --no-source-map --style=compressed ./src/scss:./dist/css/",
+    "start": "concurrently \"npm run tsc\" \"npm run sass\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^14.14.10",
-    "@typescript-eslint/eslint-plugin": "^4.9.0",
-    "@typescript-eslint/parser": "^4.9.0",
-    "eslint": "^7.14.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.2.0",
-    "prettier": "^2.2.1",
-    "prettier-eslint": "^12.0.0",
-    "prettier-eslint-cli": "^5.0.0",
-    "typescript": "^4.1.2",
-    "gts": "^3.0.3"
+    "@types/node": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "concurrently": "^7.0.0",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "sass": "^1.49.0",
+    "typescript": "^4.5.5"
   }
 }
